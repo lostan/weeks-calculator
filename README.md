@@ -22,7 +22,7 @@ A modern web application and desktop app to calculate years and weeks between tw
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/weeks-calculator.git
+git clone https://github.com/lostan/weeks-calculator.git
 cd weeks-calculator
 ```
 
