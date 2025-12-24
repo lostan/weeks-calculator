@@ -1,0 +1,54 @@
+{
+  "appId": "com.weekscalculator.app",
+  "productName": "Weeks Calculator",
+  "directories": {
+    "output": "dist",
+    "buildResources": "build"
+  },
+  "files": [
+    "electron/**/*",
+    "app/**/*",
+    "public/**/*",
+    "package.json",
+    "package-lock.json",
+    "next.config.js",
+    "tailwind.config.ts",
+    "tsconfig.json",
+    "postcss.config.js",
+    ".next/**/*",
+    "!node_modules/.cache/**/*"
+  ],
+  "extraFiles": [
+    {
+      "from": "node_modules",
+      "to": "node_modules",
+      "filter": ["**/*"]
+    }
+  ],
+  "mac": {
+    "category": "public.app-category.utilities",
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "icon": "build/icon.icns"
+  },
+  "win": {
+    "target": "nsis",
+    "icon": "build/icon.ico"
+  },
+  "linux": {
+    "target": "AppImage",
+    "icon": "build/icon.png"
+  },
+  "extraResources": [
+    {
+      "from": "node_modules/.bin/next",
+      "to": "node_modules/.bin/next",
+      "filter": ["**/*"]
+    }
+  ]
+}
+
